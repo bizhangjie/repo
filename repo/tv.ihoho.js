@@ -58,7 +58,8 @@ export default class extends Extension {
             'Accept-Language': 'en-US,en;q=0.9',
             'Accept-Encoding': 'gzip, deflate, br',
             Connection: 'keep-alive',
-          })
+          }
+        });
         const ul = /class="stui-vodlist clearfix"([\s\S]+?)\/ul/g.exec(res)[0]
         const li = ul.match(/<div class="stui-vodlist__box">([\s\S]+?)<\/div>/g)
         const bangumi = []
