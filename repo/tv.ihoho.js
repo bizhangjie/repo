@@ -81,7 +81,44 @@ export default class extends Extension {
             update
           })
         })
-        return bangumi
+        return [
+  {
+    title: '玉骨遥',
+    url: '/detail/201936.html',
+    cover: 'https://img.liangzipic.com/upload/vod/20230702-1/97a95f644aa5148316301cddbdb770e0.jpg',
+    update: '更新至第30集'
+  },
+  {
+    title: '暮色心约',
+    url: '/detail/201938.html',
+    cover: 'https://img.liangzipic.com/upload/vod/20230629-1/c89a127429dc0089f584fb8bf9dbb782.jpg',
+    update: '更新至第30集'
+  },
+  {
+    title: '长风渡',
+    url: '/detail/201945.html',
+    cover: 'https://img.liangzipic.com/upload/vod/20230618-1/e2cc81769235b3a259f6609279457e37.jpg',
+    update: '已完结'
+  },
+  {
+    title: '出发！趣野吧',
+    url: '/detail/201961.html',
+    cover: 'https://img.liangzipic.com/upload/vod/20230629-1/c41829d9ab62b1accf8707d80c440415.jpg',
+    update: '更新至第3期'
+  },
+  {
+    title: '尘缘',
+    url: '/detail/201939.html',
+    cover: 'https://img.liangzipic.com/upload/vod/20230702-1/03dfc4a7cd0106b73ec1e5f4e35d682d.jpg',
+    update: '更新至第12集'
+  },
+  {
+    title: '熟年',
+    url: '/detail/201955.html',
+    cover: 'https://img.liangzipic.com/upload/vod/20230525-1/87a5aa417d73fdad4b412870d5e1583c.jpg',
+    update: '更新至第39集'
+  }
+];
     }
 
     async detail(url) {
