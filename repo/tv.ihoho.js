@@ -10,8 +10,6 @@
 // @webSite      https://ihoho.tv
 // ==/MiruExtension==
 
-import axios from "axios";
-
 export default class extends Extension {
     constructor() {
         super("https://ihoho.tv")
