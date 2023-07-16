@@ -22,7 +22,7 @@ export default class extends Extension {
     }
 
     async search(kw, page) {
-        const response = await this.request(`/vodsearch/page/${page}/wd/${kw}.html`)
+        const response = await this.request(`/vod/search/page/${page}/wd/${kw}.html`)
         const ul = response.match(/<ul class="stui-vodlist clearfix([\s\S]+?)<\/ul/)[1]
         const li = ul.match(/<li([\s\S]+?)<\/li>/g)
         const bangumi = []
