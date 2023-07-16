@@ -10,7 +10,7 @@
 // @webSite      https://ihoho.tv/
 // ==/MiruExtension==
 
-const axios = require('axios');
+import axios from 'axios';
 
 export default class extends Extension {
     constructor() {
