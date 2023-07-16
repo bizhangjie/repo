@@ -10,7 +10,8 @@
 // @webSite      https://ihoho.tv/
 // ==/MiruExtension==
 
-import axios from './axios';
+import request from "umi-request";
+// import axios from './axios';
 
 export default class extends Extension {
     constructor() {
