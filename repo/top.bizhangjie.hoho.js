@@ -23,17 +23,17 @@ export default class extends Extension {
 
     async latest() {
         const res = await this.request('/');
-        return res.data;
+        return res;
     }
 
     async detail(url) {
         const res = await this.request(`/detail?url=${url}`);
-        return res.data;
+        return res;
     }
 
     async watch(url) {
         const res = await this.request(`/watch?url=${url}`);
-        return res.data;
+        return res;
     }
 
     async checkUpdate(url) {
