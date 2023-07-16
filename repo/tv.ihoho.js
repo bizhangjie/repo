@@ -7,7 +7,7 @@
 // @icon         https://ihoho.tv/favicon.ico
 // @package      tv.ihoho
 // @type         bangumi
-// @webSite      https://ihoho.tv
+// @webSite      https://ihoho.tv/
 // ==/MiruExtension==
 
 export default class extends Extension {
