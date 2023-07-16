@@ -22,7 +22,7 @@ export default class extends Extension {
     }
 
     async latest() {
-        const res = await this.request('/');
+        const res = await this.request('/index');
         return res;
     }
 
