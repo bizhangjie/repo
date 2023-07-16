@@ -4,7 +4,7 @@
 // @author       zj
 // @lang         zh-cn
 // @license      MIT
-// @icon         https://ihoho.tv
+// @icon         https://ihoho.tv/favicon.ico
 // @package      tv.ihoho
 // @type         bangumi
 // @webSite      https://ihoho.tv
