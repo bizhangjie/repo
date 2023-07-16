@@ -42,20 +42,19 @@ export default class extends Extension {
     }
     // 人气榜，并不是所有网站都有
     async latest() {
-        const res = await this.request("/label/rankweek.html")
-        const ul = /class="hl-rank-list clearfix"([\s\S]+?)\/ul/g.exec(res)[0]
-        const li = ul.match(/<li class="hl-list-item hl-col-xs-12">([\s\S]+?)<\/li>/g)
+        const res = await this.request("/index.html")
+        const ul = /class="stui-vodlist clearfix"([\s\S]+?)\/ul/g.exec(res.data)[0]
+        const li = ul.match(/<div class="stui-vodlist__box">([\s\S]+?)<\/div>/g)
         const bangumi = []
         li.forEach(e => {
             const title = e.match(/title="(.+?)"/)[1]
             const url = e.match(/href="(.+?)"/)[1]
-            const cover = this.getCover(e.match(/data-original="(.+?)"/)[1])
+            const cover = e.match(/data-original="(.+?)"/)[1]
             let update = ""
             try {
-                update = e.match(/<span class="hl-text-conch score">(.+?)<\/span>(.+?)<\/div>/)[2]
+                update = e.match(/<span class="pic-text1 text-right"><b>(.+?)<\/b><\/span>/)[1] + e.match(/<span class="pic-text text-right"><b>(.+?)<\/b><\/span>/)[1]
             } catch (error) {
                 update = ""
-                console.log(error);
             }
             bangumi.push({
                 title,
