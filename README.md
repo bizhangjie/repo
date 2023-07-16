@@ -1,7 +1,7 @@
 
 # Repo
 
-扩展仓库 | [Miru App Download](https://github.com/bizhangjie/repo) |
+扩展仓库 | [Download](https://github.com/bizhangjie/repo) |
 
 ## 仓库列表
 |  名称   | 包名 | 版本 | 查看 |
