@@ -10,8 +10,6 @@
 // @webSite      https://ihoho.tv/
 // ==/MiruExtension==
 
-import axios from 'axios';
-
 export default class extends Extension {
     constructor() {
         super("https://ihoho.tv/")
@@ -24,22 +22,22 @@ export default class extends Extension {
     }
 
     async search(kw, page) {
-        const res = await axios.get('http://47.115.229.58:5000/search?page=${page}&wd=${kw}');
+        const res = await this.axios.get('http://47.115.229.58:5000/search?page=${page}&wd=${kw}');
         return res.data;
     }
     // 人气榜，并不是所有网站都有，根据情况修改成首页推荐
     async latest() {
-        const res = await axios.get('http://47.115.229.58:5000');
+        const res = await this.axios.get('http://47.115.229.58:5000');
         return res.data;
     }
 
     async detail(url) {
-        const res = await axios.get('http://47.115.229.58:5000/detail?url=${url}');
+        const res = await this.axios.get('http://47.115.229.58:5000/detail?url=${url}');
         return res.data;
     }
 
     async watch(url) {
-        const res = await axios.get('http://47.115.229.58:5000/watch?url=${url}');
+        const res = await this.axios.get('http://47.115.229.58:5000/watch?url=${url}');
         return res.data;
     }
 
