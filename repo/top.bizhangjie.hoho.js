@@ -18,7 +18,7 @@ export default class extends Extension {
 
     async search(kw, page) {
         const res = await this.request(`/search?page=${page}&wd=${kw}`);
-        return res.data;
+        return res;
     }
 
     async latest() {
