@@ -49,29 +49,29 @@ export default class extends Extension {
         })
         return bangumi
     }
-    // 人气榜，并不是所有网站都有
+    // 人气榜，并不是所有网站都有，根据情况修改成首页推荐
     async latest() {
-        const res = await this.request("/label/rankweek.html")
-        const ul = /class="hl-rank-list clearfix"([\s\S]+?)\/ul/g.exec(res)[0]
-        const li = ul.match(/<li class="hl-list-item hl-col-xs-12">([\s\S]+?)<\/li>/g)
+        const res = await this.request("/")
+        const ul = /class="stui-vodlist clearfix"([\s\S]+?)\/ul/g.exec(res)[0]
+        const li = ul.match(/<div class="stui-vodlist__box">([\s\S]+?)<\/div>/g)
         const bangumi = []
         li.forEach(e => {
-            const title = e.match(/title="(.+?)"/)[1]
-            const url = e.match(/href="(.+?)"/)[1]
-            const cover = this.getCover(e.match(/data-original="(.+?)"/)[1])
-            let update = ""
-            try {
-                update = e.match(/<span class="hl-text-conch score">(.+?)<\/span>(.+?)<\/div>/)[2]
-            } catch (error) {
-                update = ""
-                console.log(error);
-            }
-            bangumi.push({
-                title,
-                url,
-                cover,
-                update
-            })
+          const title = e.match(/title="(.+?)"/)[1]
+          const url = e.match(/href="(.+?)"/)[1]
+          const cover = e.match(/data-original="(.+?)"/)[1]
+          let update = ""
+          try {
+            update = e.match(/<span class="pic-text text-right"><b>(.+?)<\/b><\/span>/)[1]
+          } catch (error) {
+            update = ""
+            console.log(error);
+          }
+          bangumi.push({
+            title,
+            url,
+            cover,
+            update
+          })
         })
         return bangumi
     }
