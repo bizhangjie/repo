@@ -22,7 +22,7 @@ export default class extends Extension {
     }
 
     async search(kw, page) {
-        const response = await this.request(`/vod/search/page/${page}/wd/${wd}.html.html`)
+        const response = await this.request(`/vod/search/page/${page}/wd/${wd}.html`)
         // const response = await axios.get('https://ihoho.tv/vod/search/wd/%E7%86%9F%E5%B9%B4.html', {
         //     headers: {
         //         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
