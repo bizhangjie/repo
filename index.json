@@ -1,4 +1,17 @@
 [
+{
+  "author": "zj",
+  "description": "矩阵国内多节点在线高清视频平台 - HOHO TV",
+  "icon": "https://ihoho.tv/favicon.ico",
+  "lang": "zh-cn",
+  "license": "MIT",
+  "name": "HOHO TV",
+  "package": "top.bizhangjie.hoho",
+  "type": "bangumi",
+  "url": "top.bizhangjie.hoho.js",
+  "version": "v0.0.1",
+  "webSite": "http://47.115.229.58:5000"
+ },
  {
   "author": "zj",
   "description": "555,555电影,555影视,恐怖电影,奈飞Netflix,2022最新电影,在线电影网,免费VIP视频,日本动,韩国电影,日本电影,免费视频,在线视频,预告片",
