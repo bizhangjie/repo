@@ -1,5 +1,18 @@
 [
  {
+  "author": "zj",
+  "description": "矩阵国内多节点在线高清视频平台 - HOHO TV",
+  "icon": "https://ihoho.tv/favicon.ico",
+  "lang": "zh-cn",
+  "license": "MIT",
+  "name": "HOHO TV",
+  "package": "tv.ihoho",
+  "type": "bangumi",
+  "url": "tv.ihoho.js",
+  "version": "v0.0.1",
+  "webSite": "https://ihoho.tv"
+ },
+ {
   "author": "MiaoMint",
   "description": "欧乐影院－面向海外华人的在线视频媒体平台,海量高清视频在线观看,电影电视剧一网打尽",
   "icon": "https://static.olelive.com/upload/site/20201117-1/902e3851b6695ac661422b45483d694a.png",
