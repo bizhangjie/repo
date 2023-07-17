@@ -78,7 +78,7 @@ export default class extends Extension {
         const title = res.match(/class="tjuqing">(.+?)</)[1]
         const desc = title;
         const watchUrlTitleStr = res.match(/layui-tab-title([\s\S]+?)<\/ul>/g)[0]
-        const watchUrlTitle = watchUrlTitleStr.match(/>([\s\S]+?)<\/li>/g)
+        const watchUrlTitle = watchUrlTitleStr.match(/<li([\s\S]+?)<\/li>/g)
         const watchUrlGroupsStr = res.match(/detaail_url layui-tab-item([\s\S]+?)<\/div>/g)
         const episodes = []
         let i = 0
