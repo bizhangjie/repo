@@ -12,7 +12,7 @@
 
 export default class Qiximh extends Extension {
     async latest() {
-        const res = await this.request("/category/order/addtime")
+        const res = await this.request("/index.php/custom/week")
         const divList = res.match(/<div class="top-list__box-item">([\s\S]+?)<\/div>/g)
         const manga = []
         divList.forEach(e => {
@@ -36,7 +36,7 @@ export default class Qiximh extends Extension {
     }
 
     async search(kw, page) {
-        const res = await this.request(`/search/${kw}/${page}`)
+        const res = await this.request(`/index.php/search/${kw}/${page}`)
         let divlist
         const manga = []
         try {
@@ -66,7 +66,7 @@ export default class Qiximh extends Extension {
     }
 
     async detail(url) {
-        const res = await this.request(`/${url}/`)
+        const res = await this.request(`${url}`)
         const title = res.match(/<p class="comic-title j-comic-title">(.+?)<\/p>/)[1]
         const cover = res.match(/<div class="de-info__cover"><img class="lazy" src="(.+?)"/)[1]
         const desc = res.match(/<p class="intro-total">(.+?)<\/p>/)[1]
@@ -93,7 +93,7 @@ export default class Qiximh extends Extension {
     }
 
     async watch(url) {
-        const res = await this.request(`/${url}`)
+        const res = await this.request(`${url}`)
         const img = res.match(/data-original="(.+?)"/g)
         const images = []
         img.forEach(e => {
