@@ -100,6 +100,18 @@
   "version": "v0.0.1",
   "webSite": "https://www.493d.com/"
  },
+  {
+  "author": "zj",
+  "icon": "https://www.biqug.org/template/pc/default/images/favicon.ico",
+  "lang": "zh-cn",
+  "license": "MIT",
+  "name": "笔趣阁漫画",
+  "package": "org.biqug.www",
+  "type": "manga",
+  "url": "org.biqug.www.js",
+  "version": "v0.0.1",
+  "webSite": "https://www.biqug.org/"
+ },
  {
   "author": "MiaoMint",
   "icon": "https://www.36manhua.com/template/pc/default/images/pic_nav_logo.png",
