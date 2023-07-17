@@ -24,7 +24,7 @@ export default class extends Extension {
         li.forEach(e => {
             try{
                 const title = e.match(/<p>(.+?)<\/p>/)[1]
-                const url = e.match(/href="(.+?)"/)[1]
+            
                 const originalUrl = e.match(/href="(.+?)"/)[1]
                 const dynamicValue = originalUrl.match(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/)[1];
                 const url = originalUrl.replace(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/, '/detail/id/' + dynamicValue + '.html');
