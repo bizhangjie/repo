@@ -25,8 +25,9 @@ export default class extends Extension {
             try{
                 const title = e.match(/<p>(.+?)<\/p>/)[1]
                 const url = e.match(/href="(.+?)"/)[1]
-                const dynamicValue = url.match(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/)[1];
-                const modifiedUrl = url.replace(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/, '/detail/id/' + dynamicValue + '.html');
+                const originalUrl = e.match(/href="(.+?)"/)[1]
+                const dynamicValue = originalUrl.match(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/)[1];
+                const url = originalUrl.replace(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/, '/detail/id/' + dynamicValue + '.html');
                 const cover = e.match(/data-src="(.+?)"/)[1]
                 let update = ""
                 try{
@@ -36,7 +37,7 @@ export default class extends Extension {
                 }
                 bangumi.push({
                     title,
-                    modifiedUrl,
+                    url,
                     cover,
                     update
                 })
