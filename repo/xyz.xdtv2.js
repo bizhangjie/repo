@@ -71,7 +71,7 @@ export default class extends Extension {
     async detail(url) {
         const res = await this.request(url)
 
-        const cover = res.match(/class="img-responsive"  src="(.+?)"/)[1]
+        const cover = res.match(/class="img-responsive" src="(.+?)"/)[1]
         const title = res.match(/name="description" content="(.+?)"/)[1]
         const desc = title;
         const originalUrl = url;
