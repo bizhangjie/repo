@@ -1,7 +1,20 @@
 [
   {
   "author": "zj",
-  "description": "矩阵国内多节点在线高清视频平台 - HOHO TV",
+  "description": "看你想看",
+  "icon": "https://xdtv2.xyz/template/xdtv/static/favicon.ico",
+  "lang": "zh-cn",
+  "license": "MIT",
+  "name": "LIKE TV 1",
+  "package": "xyz.xdtv2",
+  "type": "bangumi",
+  "url": "xyz.xdtv2.js",
+  "version": "v0.0.1",
+  "webSite": "https://xdtv2.xyz"
+ },
+  {
+  "author": "zj",
+  "description": "看你想看",
   "icon": "https://www.lkp2.top/template/muban8/favicon.ico",
   "lang": "zh-cn",
   "license": "MIT",
