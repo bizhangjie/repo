@@ -20,13 +20,13 @@ export default class extends Extension {
 
         const ul = /div><div class="group-contents layui-row"([\s\S]+?)\/ul/g.exec(res)[0]
         const li = ul.match(/<a href="([\s\S]+?)<\/a>/g)
-        console.log(res)
-        console.log(li)
         const bangumi = []
         li.forEach(e => {
             try{
                 const title = e.match(/<p>(.+?)<\/p>/)[1]
                 const url = e.match(/href="(.+?)"/)[1]
+                const dynamicValue = url.match(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/)[1];
+                const modifiedUrl = url.replace(/\/play\/id\/(\d+)\/sid\/1\/nid\/1\.html/, '/detail/id/' + dynamicValue + '.html');
                 const cover = e.match(/data-src="(.+?)"/)[1]
                 let update = ""
                 try{
@@ -36,7 +36,7 @@ export default class extends Extension {
                 }
                 bangumi.push({
                     title,
-                    url,
+                    modifiedUrl,
                     cover,
                     update
                 })
