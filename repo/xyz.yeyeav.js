@@ -18,7 +18,7 @@ export default class extends Extension {
     async search(kw, page) {
         const res = await this.request(`/index.php/vod/search/page/${page}/wd/${kw}.html`)
 
-        const res1 = res.data.replace(/\n/g, '');
+        const res1 = res.replace(/\n/g, '');
         const lis = res1.match(/class="i_list layui-col-sm3">([\s\S]+?)<\/li>/g)
         const bangumi = []
 
@@ -45,7 +45,7 @@ export default class extends Extension {
     async latest() {
         const res = await this.request("/index.php/vod/type/id/131.html")
 
-        const res1 = response.data.replace(/\n/g, '');
+        const res1 = res.replace(/\n/g, '');
         const lis = res1.match(/class="i_list layui-col-sm3 ">([\s\S]+?)<\/li>/g)
         const bangumi = []
 
