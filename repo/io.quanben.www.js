@@ -162,7 +162,7 @@ export default class Biquge extends Extension {
     async watch(url) {
         const res = await this.request(`${url}`)
         const title = res.match(/<h1 class="headline" itemprop="headline">(.+?)<\/h1>/)[1]
-        const contents = res.match(/<div id="content">([\s\S]+?)<!--PAGE 4-->/g)[0].match(/<p>(.*?)<\/p>/g);
+        const contents = res.match(/<div id="content">([\s\S]+?)<\/div>/g)[0].match(/<p>(.*?)<\/p>/g);
         let content = []
         contents.forEach((e) => {
             content.push(e.match(/<p>(.+?)<\/p>/)[1])
