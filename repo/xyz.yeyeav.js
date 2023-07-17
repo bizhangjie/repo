@@ -71,8 +71,9 @@ export default class extends Extension {
     }
 
     async detail(url) {
-        const res = await this.request(url)
+        const res1 = await this.request(url)
 
+        const res = res1.replace(/\n/g, '');
         const cover = res.match(/layui-col-md3 detail_img"><img src="(.+?)"/)[1]
         const title = res.match(/class="tjuqing">(.+?)</)[1]
         const desc = title;
