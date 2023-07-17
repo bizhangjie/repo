@@ -86,7 +86,7 @@ export default class Biquge extends Extension {
         // console.log(cover)
         // console.log(desc)
 
-        const resN = await this.request(`https://www.quanben.io/index.php?c=book&a=list.jsonp&callback=${callback}&book_id=${book}&b=${base64(callback)}`, {
+        const resN = await this.request(`/index.php?c=book&a=list.jsonp&callback=${callback}&book_id=${book}&b=${base64(callback)}`, {
             headers: {
                 "miru-referer": `https://www.quanben.io${url}list.html`
             }
