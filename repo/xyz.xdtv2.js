@@ -70,6 +70,7 @@ export default class extends Extension {
 
     async detail(url) {
         const res = await this.request(url)
+
         const cover = res.match(/class="img-responsive"  src="(.+?)"/)[1]
         const title = res.match(/name="description" content="(.+?)"/)[1]
         const desc = title;
@@ -86,6 +87,7 @@ export default class extends Extension {
                     }
                 ]
             }];
+        
         return {
             episodes,
             desc,
@@ -101,11 +103,6 @@ export default class extends Extension {
             type: "hls",
             url: m3u8
         }
-    }
-
-    async checkUpdate(url) {
-        const res = await this.request(url)
-        return res.match(/<span class="hl-text-conch">(.+?)<\/span>/)[1]
     }
 
 }
