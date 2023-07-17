@@ -16,7 +16,7 @@ export default class extends Extension {
     }
 
     async search(kw, page) {
-        const res = await this.request(`/index.php/vod/search/page/${page}/wd/${kw}.html`)
+        const res = await this.request(`/hunt/${kw}/h/${page}`)
 
         const divs = res.match(/class="tup">([\s\S]+?)<\/div>/g)
         const bangumi = []
@@ -42,7 +42,7 @@ export default class extends Extension {
         return bangumi
     }
     async latest() {
-        const res = await this.request("/index.php/vod/type/id/5.html")
+        const res = await this.request("/sort/id/304.html")
 
         const divs = res.match(/class="tup">([\s\S]+?)<\/div>/g)
         const bangumi = []
