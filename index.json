@@ -1,4 +1,16 @@
 [
+  "author": "zj",
+  "description": "矩阵国内多节点在线高清视频平台 - HOHO TV",
+  "icon": "https://www.lkp2.top/template/muban8/favicon.ico",
+  "lang": "zh-cn",
+  "license": "MIT",
+  "name": "LIKE TV 1",
+  "package": "top.lkp2.www",
+  "type": "bangumi",
+  "url": "top.lkp2.www.js",
+  "version": "v0.0.1",
+  "webSite": "https://www.lkp2.top"
+ },
 {
   "author": "zj",
   "description": "矩阵国内多节点在线高清视频平台 - HOHO TV",
