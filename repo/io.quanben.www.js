@@ -10,8 +10,6 @@
 // @nsfw         true
 // ==/MiruExtension==
 
-import axios from "axios";
-
 export default class Biquge extends Extension {
     async latest() {
         const res = await this.request("/c/xuanhuan.html")
