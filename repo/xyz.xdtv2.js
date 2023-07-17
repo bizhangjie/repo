@@ -5,7 +5,7 @@
 // @lang         zh-cn
 // @license      MIT
 // @icon         https://xdtv2.xyz/template/xdtv/static/favicon.ico
-// @package      top.lkp2.www
+// @package      xyz.xdtv2
 // @type         bangumi
 // @webSite      https://xdtv2.xyz/
 // ==/MiruExtension==
