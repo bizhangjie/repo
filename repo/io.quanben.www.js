@@ -160,7 +160,7 @@ export default class Biquge extends Extension {
     }
 
     async watch(url) {
-        const res = await this.request(`/${url}`)
+        const res = await this.request(`${url}`)
         const title = res.match(/<h1 class="headline" itemprop="headline">(.+?)<\/h1>/)[1]
         const content = res.match(/<div id="content">([\s\S]+?)<!--PAGE 4-->/g)[0]
         return {
