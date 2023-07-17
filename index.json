@@ -76,6 +76,18 @@
   "version": "v0.0.4",
   "webSite": "https://api.enime.moe"
  },
+  {
+  "author": "zj",
+  "lang": "zh-cn",
+  "license": "MIT",
+  "name": "全本小说网",
+  "nsfw": "true",
+  "package": "io.quanben.www",
+  "type": "fikushon",
+  "url": "io.quanben.www.js",
+  "version": "v0.0.1",
+  "webSite": "https://www.quanben.io/"
+ },
  {
   "author": "MiaoMint",
   "lang": "zh-cn",
