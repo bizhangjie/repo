@@ -100,8 +100,7 @@ export default class extends Extension {
 
         const res1= res.replace(/\n/g, '')
         const encodedString = res1.match(/,"url":"(.+?)","url_next/)[1].replace('O0O0O','')
-        const decodedBuffer = Buffer.from(encodedString, 'base64');
-        const decodedString = decodedBuffer.toString('utf-8');
+        const decodedString = ato(encodedString)
 
         return {
             type: "hls",
