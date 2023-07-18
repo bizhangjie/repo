@@ -72,10 +72,10 @@ export default class extends Extension {
         const res = await this.request(url)
 
         const res1 = res.replace(/\n/g, '')
-        const cover = 'https://picmeta2023.top/upload/vod/20230718-1/57a0e05fde51d9624b56e16f903e67d7.jpg'
+        const cover = ''
         const title = res1.match(/h1>(.+?)<\/h1>/)[1]
         const desc = title;
-        const modifiedUrl = 'asda'
+        const modifiedUrl = url
         const episodes = [
             {
                 'title': '国内地址',
