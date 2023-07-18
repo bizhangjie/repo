@@ -28,7 +28,7 @@ export default class PiPiXia extends Extension {
                 title,
                 url,
                 cover,
-                update: '完结全本'
+                update: update
             })
         })
 
@@ -51,7 +51,7 @@ export default class PiPiXia extends Extension {
                 title,
                 url,
                 cover,
-                update: '完结全本'
+                update: update
             })
         })
 
