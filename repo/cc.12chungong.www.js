@@ -100,7 +100,7 @@ export default class extends Extension {
 
         const res1= res.replace(/\n/g, '')
         const encodedString = res1.match(/,"url":"(.+?)","url_next/)[1].replace('O0O0O','')
-        const decodedString = ato(encodedString)
+        const decodedString = atob(encodedString)
 
         return {
             type: "hls",
