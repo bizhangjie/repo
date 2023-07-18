@@ -132,6 +132,18 @@
   "author": "zj",
   "lang": "zh-cn",
   "license": "MIT",
+  "name": "皮皮虾说",
+  "nsfw": "true",
+  "package": "com.ppxxs.www",
+  "type": "fikushon",
+  "url": "com.ppxxs.www.js",
+  "version": "v0.0.1",
+  "webSite": "https://www.ppxxs.com/"
+ },
+  {
+  "author": "zj",
+  "lang": "zh-cn",
+  "license": "MIT",
   "name": "全本小说网",
   "nsfw": "true",
   "package": "io.quanben.www",
