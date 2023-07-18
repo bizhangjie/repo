@@ -90,7 +90,6 @@ export default class extends Extension {
         return {
             episodes,
             desc,
-            cover,
             title
         }
     }
