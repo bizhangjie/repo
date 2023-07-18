@@ -82,8 +82,9 @@ export default class PiPiXia extends Extension {
     }
 
     async watch(url) {
-        const res = await this.request(`${url}`)
+        const res1 = await this.request(`${url}`)
 
+        const res = res1.replace(/\n/g, '');
         const title = res.match(/title>(.+?)-/)[1]
         const contents = res.match(/panel-body">(.+?)<\/div>/)[1].match(/<\/h4><p><p>(.+?)<\/p><\/p>/)[1].split("<br/>")
         let content = []
