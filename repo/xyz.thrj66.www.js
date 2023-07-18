@@ -16,7 +16,7 @@ export default class extends Extension {
     }
     //
     async search(kw, page) {
-        const res = await this.request(`/index.php/vodsearch/${kw}----------${[page]}---.html`)
+        const res = await this.request(`/index.php/vod/search/page/${page}/wd/${kw}.html`)
 
         const res1 = res.replace(/\t/g, '')
         const body = res1.match(/col-md-3 portfolio-item new-video">([\s\S]+?)row text-center/)[1]
